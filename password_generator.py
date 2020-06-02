@@ -52,5 +52,5 @@ for j in range(multiple):
 		ran_num = random.randint(0,length - 1)
 		ran_char = characters[ran_num]
 		password += ran_char
-	print(password)
+	print([+], password)
 	password = ""
