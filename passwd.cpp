@@ -73,8 +73,7 @@ void generate(string chars)
   cin >> multi;
   
   srand(time(0));
-  
-  
+ 
   for(int x=0; x<multi; x++) {
     for(int y=0; y<pass_len; y++) {
       int ran_num = (rand () % char_len);
@@ -84,13 +83,10 @@ void generate(string chars)
     }
     //cout << password << endl;
     myfile << password << endl;  
-    password = "";
-    
-    
+    password = "";   
   }
   myfile.close();
 }
-
 
 int main()
 {
