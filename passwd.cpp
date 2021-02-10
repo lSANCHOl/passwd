@@ -73,7 +73,7 @@ void generate(string chars)
   cin >> multi;
   
   srand(time(0));
-  string passwords[multi];
+  
   
   for(int x=0; x<multi; x++) {
     for(int y=0; y<pass_len; y++) {
@@ -82,10 +82,11 @@ void generate(string chars)
       ran_char = chars[ran_num];
       password += ran_char;
     }
-    passwords[x] = password;  
+    //cout << password << endl;
+    myfile << password << endl;  
     password = "";
-    //cout << passwords[x]<< endl;
-    myfile << passwords[x] << endl;
+    
+    
   }
   myfile.close();
 }
