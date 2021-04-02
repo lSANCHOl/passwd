@@ -7,7 +7,7 @@
 using namespace std;
 
 // '£' won't print. wonder why?
-string char_set1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!\"$%^&*()-_=+[{]};:'@#~|,<.>/?";
+string char_set1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!\"£$%^&*()-_=+[{]};:'@#~|,<.>/?";
 string char_set2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 string char_set3 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 string char_set4 = "abcdefghijklmnopqrstuvwxyz1234567890";
