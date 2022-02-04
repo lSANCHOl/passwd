@@ -1,7 +1,8 @@
 #!/bin/python3
 
 import sys
-import random
+import secrets
+
 
 char_set1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!\"£$%^&*()-_=+[{]};:'@#~\|,<.>/?"
 char_set2 = "abcdefghijklmnopqrstuvwxyz"
@@ -43,24 +44,20 @@ if choice == "7":
 if choice == "8":
 	characters = char_set8
 if choice == "9":
-   characters = input("input characters you want to use: ")
+    characters = input("input characters you want to use: ")
 
 length = len(characters)
 pass_len = int(input("how long for the password?: "))
 multiple = int(input("how many passwords should be created?: "))
-password = ""
 passwords = [ ]
 mylist = []
 while len(mylist) < multiple:
-	for j in range(multiple):
-		for i in range(pass_len):
-			ran_num = random.randint(0,length - 1)
-			ran_char = characters[ran_num]
-			password += ran_char
-		passwords.append(password)
-		password = ""
-		mylist = passwords
-		mylist = list(dict.fromkeys(mylist))
+    for j in range(multiple):
+        password = ''.join(secrets.choice(characters) for i in range(pass_len-1))
+        passwords.append(password)
+        #password = ""
+        mylist = passwords
+        mylist = list(dict.fromkeys(mylist))
 	
 
 output = input("print resuts or store in text file? [p/s]: ")
@@ -91,3 +88,4 @@ if output == "s":
                 f.write(mylist[i-1])
                 f.write('\n')
                 f.close
+
